@@ -1,0 +1,42 @@
+cff-version: 1.2.0
+title: "DP-Fusion-Lib: Token-Level Differentially Private Inference for Large Language Models"
+message: "If you use this software, please cite it as below."
+type: software
+authors:
+  - family-names: "Thareja"
+    given-names: "Rushil"
+    email: "rushil.thareja@mbzuai.ac.ae"
+    affiliation: "MBZUAI"
+repository-code: "https://github.com/rushil-thareja/dp-fusion-lib"
+url: "https://github.com/rushil-thareja/dp-fusion-lib"
+license: "LicenseRef-NonCommercial"
+version: "0.1.0"
+date-released: "2025-01-01"
+keywords:
+  - differential-privacy
+  - text-generation
+  - large-language-models
+  - privacy
+  - machine-learning
+  - renyi-divergence
+  - nlp
+preferred-citation:
+  type: article
+  authors:
+    - family-names: "Thareja"
+      given-names: "Rushil"
+    - family-names: "Lukas"
+      given-names: "Nils"
+    - family-names: "Baba"
+      given-names: "Sarim"
+    - family-names: "Abbasi"
+      given-names: "Ahmed"
+    - family-names: "Asokan"
+      given-names: "N."
+  title: "DP-Fusion: Token-Level Differentially Private Inference for Large Language Models"
+  year: 2025
+  url: "https://arxiv.org/abs/2507.04531"
+  identifiers:
+    - type: other
+      value: "arXiv:2507.04531"
+      description: "arXiv preprint"
