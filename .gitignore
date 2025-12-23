@@ -80,3 +80,6 @@ models/
 # Build artifacts
 *.whl
 MANIFEST
+# Claude Code personal config
+CLAUDE.md
+.claude/
