@@ -1,4 +1,5 @@
-# DP-Fusion-Lib
+
+![Diagram](images/dpfusion_logo.png)
 
 [![PyPI](https://img.shields.io/pypi/v/dp-fusion-lib.svg)](https://pypi.org/project/dp-fusion-lib/)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
@@ -210,7 +211,6 @@ DP-Fusion-Lib is available under a dual license:
 | Educational use | Non-Commercial License | Free |
 | Commercial products | Commercial License | Contact for pricing |
 
-For commercial inquiries, contact [rushil.thareja@mbzuai.ac.ae](mailto:rushil.thareja@mbzuai.ac.ae).
 
 ---
 
