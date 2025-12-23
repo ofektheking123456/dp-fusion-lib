@@ -1,5 +1,5 @@
 
-![Diagram](images/dpfusion_logo.png)
+![Diagram](images/dp-fusion-logo.png)
 
 [![PyPI](https://img.shields.io/pypi/v/dp-fusion-lib.svg)](https://pypi.org/project/dp-fusion-lib/)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
