@@ -97,6 +97,7 @@ tokenizer = AutoTokenizer.from_pretrained("Qwen/Qwen2.5-7B-Instruct")
 
 # Initialize Tagger
 tagger = Tagger(api_key="your_api_key")
+tagger.set_model("gpt-oss-120b")  # Strong extraction model
 tagger.set_constitution("LEGAL")  # Options: LEGAL, HEALTH, FINANCE
 ```
 
@@ -105,7 +106,7 @@ tagger.set_constitution("LEGAL")  # Options: LEGAL, HEALTH, FINANCE
 The library applies differential privacy only to segments marked as private, allowing precise control over which content receives protection.
 
 ```python
-dpf = DPFusion(model=model, tokenizer=tokenizer, tagger=tagger)
+dpf = DPFusion(model=model, tokenizer=tokenizer, max_tokens=100, tagger=tagger)
 
 # Sample document with sensitive information
 document = """The applicant was born in 1973 and currently resides in
@@ -113,18 +114,41 @@ Les Salles-sur-Verdon, France. In the early 1990s, a new criminal
 phenomenon emerged in Denmark known as 'tax asset stripping cases'."""
 
 # Build context with privacy annotations
-dpf.add_message("system", "You're job is to re-write documents for privacy. You will be provided a document out a paraphrase that preserves privacy and doesn't leak personally identifiable information. Just output the paraphrase only, nothing else.", is_private=False)
-dpf.add_message("user", document, is_private=True)
-dpf.add_message("user", "I just passed the document to you, you can paraphrase it for privacy.", is_private=False)
-dpf.add_message("assistant", "Here is the paraphrased document:", is_private=False)
+dpf.add_message("system", "You are a helpful assistant that paraphrases text.", is_private=False)
+dpf.add_message("user", document, is_private=True)  # Mark sensitive content as private
+dpf.add_message("system", "Now paraphrase this text for privacy", is_private=False)
+dpf.add_message("assistant", "Sure, here is the paraphrase of the above text that ensures privacy:", is_private=False)
 ```
 
-### Step 3: Execute Private Generation
+### Step 3: Run Tagger to Build Private and Public Contexts
+
+The tagger automatically identifies sensitive phrases and creates two parallel contexts:
 
 ```python
-# Run tagger to identify and redact sensitive phrases
+# Run tagger to extract PII and build redacted context
 dpf.run_tagger()
+# Extracted phrases: ['1973', 'Les Salles-sur-Verdon', 'early 1990s', 'tax asset stripping cases']
 
+# View the two contexts that DP-Fusion uses:
+print(dpf.private_context)  # Original text with real values
+print(dpf.public_context)   # Redacted text with ____ placeholders
+```
+
+**Private context** (what the model sees with full information):
+```
+The applicant was born in 1973 and currently resides in Les Salles-sur-Verdon, France.
+In the early 1990s, a new criminal phenomenon emerged in Denmark...
+```
+
+**Public context** (redacted version):
+```
+The applicant was born in ____ and currently resides in _________.
+In the _______, a new criminal phenomenon emerged in Denmark...
+```
+
+### Step 4: Generate with Differential Privacy
+
+```python
 # Generate with differential privacy
 output = dpf.generate(
     alpha=2.0,      # Rényi order
@@ -135,7 +159,7 @@ output = dpf.generate(
 print(output['text'])
 ```
 
-### Step 4: Compute Privacy Guarantee
+### Step 5: Compute Privacy Guarantee
 
 The library provides two epsilon values for comprehensive privacy accounting:
 
